@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Error from './components/error/Error';
+import { sessionStorageGetItem } from './utils/globalFunction';
+import Layout from './components/Layout/Layout';
+import Login from './pages/Login/Login';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/app/dashboard" replace />} />
+        <Route path="/app/*" element={<PrivateRoute><Layout /></PrivateRoute>} />
+        <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </Router>
   );
 }
+
+const PrivateRoute = ({ children }) => {
+  const isAuthenticated = sessionStorageGetItem();
+  return "isAuthenticated" ? children : <Navigate to="/login" replace />;
+};
+
+const PublicRoute = ({ children }) => {
+  return children;
+};
 
 export default App;
