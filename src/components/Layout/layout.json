@@ -1,0 +1,20 @@
+{
+    "sidebarJSON": {
+        "SidebarHeaderImage": "icons8-system-administrator-female-100.png",
+        "SidebarHeaderName": "Admin Panel",
+        "WebView": [
+            {
+                "location": "/app/dashboard",
+                "label": "Dashboard"
+            },
+            {
+                "location": "/app/user",
+                "label": "User Management"
+            }
+        ]
+    },
+    "headerJSON" : {
+        "Admin-image" : "icons8-system-administrator-female-100.png",
+        "Admin-name" : "Administrator"
+    }
+}
