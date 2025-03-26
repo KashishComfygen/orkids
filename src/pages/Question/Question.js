@@ -6,7 +6,7 @@ import Loading from "../../components/Loader/Loader";
 import Tooltip from '@mui/material/Tooltip';
 import { MdDeleteOutline } from "react-icons/md";
 import { RiEditLine } from "react-icons/ri";
-// Static Data for the Question
+
 const questionData = {
     "indexing": null,
     "_id": "65f305a212b00f874dc9fec1",
@@ -27,7 +27,7 @@ const questionData = {
     "image": {
         "hi": "https://res.cloudinary.com/dnd2isyjo/image/upload/v1712322761/your_folder_name/abtqywuhyw3q9t4wz6h1.jpg",
         "en": "https://res.cloudinary.com/dnd2isyjo/image/upload/v1711635311/your_folder_name/l9d28cdrthznluivbxgd.jpg",
-        // Add other language images here if needed
+      
     },
     "setId": 1,
     "isSpecial": false,
@@ -35,7 +35,7 @@ const questionData = {
     "audio": {
         "hi": "https://res.cloudinary.com/dnd2isyjo/video/upload/v1712215529/your_folder_name/z56jpnykkgylt3rzftyh.mp3",
         "en": "https://res.cloudinary.com/dnd2isyjo/video/upload/v1718179597/your_folder_name/hg7dqhkhtvxvnxeeidqo.mp3",
-        // Add other language audio links here if needed
+       
     },
     "options": [],
     "isMultiLanguage": "YES",
@@ -46,13 +46,13 @@ const Question = () => {
     const [filter, setFilter] = useState("1");
     const [specialFilter, setspecialFilter] = useState(true);
 
-    // Handle special filter
+    
     const handleSpecialChange = (e) => {
         const value = e.target.value === 'true';
         setspecialFilter(value);
     };
 
-    // Handle question set filter
+    
     const handleQuestionChange = (e) => {
         if (e.target.value === "-1") {
             setspecialFilter(true);
@@ -62,28 +62,13 @@ const Question = () => {
         }
     };
 
-    // Handle delete action
-    const handleDelete = (data) => {
-        confirmAlert({
-            title: 'Delete',
-            message: `Are you sure want to Delete?`,
-            buttons: [
-                {
-                    label: 'Yes',
-                    onClick: () => console.log('Deleted', data),
-                },
-                {
-                    label: 'No',
-                }
-            ]
-        });
-    };
+  
 
-    // Static rendering of the question list
+   
     const renderQuestionList = (specialFilter) => {
         return specialFilter
-            ? [questionData] // If specialFilter is true, render this question (you can extend this if needed)
-            : [questionData]; // Can render a different list if specialFilter is false
+            ? [questionData] 
+            : [questionData]; 
     };
 
     return (

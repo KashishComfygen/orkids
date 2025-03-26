@@ -35,7 +35,7 @@ const LanguageManagement = () => {
   };
 
   useEffect(() => {
-    // Set the static data as the initial list
+    
     setLanguageList(staticData.list);
   }, []);
 
@@ -43,12 +43,10 @@ const LanguageManagement = () => {
     setsearchKeyword(e.target.value);
   };
 
-  const handlePageClick = (data) => {
-    setCurrentPage(data.selected);
-  };
+ 
 
   const handleDisabled = (e) => {
-    // Update the language status here
+    
     const updatedList = languageList.map(item => {
       if (item._id === e._id) {
         return { ...item, isDisabled: !item.isDisabled };
@@ -70,7 +68,7 @@ const LanguageManagement = () => {
 
   const handleSubmitUpdate = (e) => {
     e.preventDefault();
-    // Handle the update logic here, like updating the language in the list.
+  
     setopenAddmodelUpdate(false);
   };
 

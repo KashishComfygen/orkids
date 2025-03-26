@@ -86,20 +86,19 @@ const LanguageSetting = () => {
     setSearchKeyword(e.target.value);
   }
 
-  // Simulating the fetch of data on component mount and when search changes
+  
   useEffect(() => {
-    // You can simulate an API call here and set data based on searchKeyword.
-    // For now, we're using the staticData.
+   
 
     if (searchKeyword) {
-      // Filter the data based on search keyword in the name or key.
+    
       const filteredData = dummyData.filter(item =>
         item.name.toLowerCase().includes(searchKeyword.toLowerCase()) ||
         item.key.toLowerCase().includes(searchKeyword.toLowerCase())
       );
       setStaticData(filteredData);
     } else {
-      setStaticData(dummyData); // Reset if no search term is entered
+      setStaticData(dummyData); 
     }
   }, [searchKeyword]);
 

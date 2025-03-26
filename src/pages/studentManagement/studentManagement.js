@@ -20,15 +20,15 @@ const StudentManagements = () => {
     const [openAddmodelUpdate, setOpenAddModelUpdate] = useState(false)
     const [searchKeyword, setSearchKeyword] = useState("");
 
-    // Static Data for Student List
+ 
     const studentList = [
         { _id: 1, fullName: "John Doe", dob: "2005-05-15", mobNo: "1234567890", email: "john@example.com", grade: "A" },
         { _id: 2, fullName: "Jane Smith", dob: "2006-07-20", mobNo: "9876543210", email: "jane@example.com", grade: "B" },
         { _id: 3, fullName: "Mark Johnson", dob: "2004-11-05", mobNo: "1122334455", email: "mark@example.com", grade: "C" },
-        // Add more students here as needed
+     
     ];
 
-    const total = studentList.length; // Static total count based on studentList length
+    const total = studentList.length;
 
     const handleSearch = (e) => {
         setSearchKeyword(e.target.value);
@@ -39,7 +39,7 @@ const StudentManagements = () => {
     };
 
     const handleDelete = (data) => {
-        // Simulate delete action for static data
+      
         alert(`Deleted student: ${data.fullName}`);
     };
 
@@ -50,7 +50,7 @@ const StudentManagements = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Add form submission logic here if needed for static data
+       
         console.log("Form submitted:", formData);
     };
 

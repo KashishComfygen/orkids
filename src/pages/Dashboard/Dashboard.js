@@ -6,14 +6,14 @@ import DonutChart from './Charts/DonutChart';
 import BarChartExample from './Charts/BarChartExample';
 
 const Dashboard = () => {
-  // Replace the selector with static data
+ 
   const dashboardData = {
     data: {
       allUserCount: 1200,
       allStudentCount: 800,
       screeningCount: 500,
       allLanguageCount: 5,
-      // static data for graph
+ 
       graphData: {
         data: {
           finalResult: [
@@ -40,7 +40,7 @@ const Dashboard = () => {
     <div className='my-3 mx-5 h-[90vh] overflow-y-scroll'>
       {/* <Testing/> */}
 
-      <Loading loading={false} /> {/* If you want to disable Loading for the static data */}
+      <Loading loading={false} /> 
       <div className='flex flex-col gap-12'>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 '>
           <div className='bg-[#EB5757] rounded-[10px] space-x-1 p-5'>
@@ -86,7 +86,7 @@ const Dashboard = () => {
                 <div className='text-gray-400'>Lifetime</div>
               </div>
               <div>
-                <DonutChart graphData={graphData} /> {/* Passing the graphData */}
+                <DonutChart graphData={graphData} />
               </div>
             </div>
           </div>

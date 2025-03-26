@@ -22,7 +22,7 @@ const UserManagement = () => {
   const [openAddmodelUpdate, setopenAddmodelUpdate] = useState(false);
   const [updateError,setupdateError]=useState("")
   let [errorCreate, seterrorCreate] = useState({})
-  // Handle adding a new user
+ 
   const handleAddUser = (e) => {
     e.preventDefault();
     if (handleValidationCreate()) {
@@ -33,7 +33,7 @@ const UserManagement = () => {
     }
   };
 
-  // Handle validation for adding a user
+ 
   const handleValidationCreate = () => {
     let formIsValid = true;
     let errors = {};
@@ -211,7 +211,7 @@ const UserManagement = () => {
         </div>
       </div>
 
-      {/* Modals for Add User and Update User */}
+    
       <Model
         formData={formData}
         setFormData={setFormData}
