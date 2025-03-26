@@ -5,7 +5,7 @@ import { RiEditLine } from 'react-icons/ri';
 import Model from './Modal/Modal';
 import Modelupdate from './Modal/Modelupdate';
 import ReactPaginate from 'react-paginate';
-
+import { MdSearch } from 'react-icons/md';
 const UserManagement = () => {
   const staticUsersData = [
     { _id: '1', fullName: 'John Doe', email: 'john@example.com', mobNo: '1234567890', type: 'Teacher', noOfChilderen: 2 },
@@ -131,15 +131,17 @@ const UserManagement = () => {
 
           <div className="md:py-6 py-4 md:px-10 ">
             <div className="lg:flex justify-between w-full items-center lg:space-y-0 space-y-2 gap-4 lg:px-0 px-10 text-[#7E84A3]">
-              <div className="lg:max-w-lg w-full bg-white h-[40px] flex items-center border border-[#D9E1EC] rounded gap-2">
-                <input
-                  className="flex-grow h-full outline-none text-sm"
-                  onChange={handleSearch}
-                  value={searchKeyword}
-                  type="text"
-                  placeholder="Search"
-                />
-              </div>
+            <div className="max-w-lg bg-white h-[40px] w-full flex items-center border border-[#D9E1EC] rounded gap-2">
+  <MdSearch className="w-6 h-6 text-gray-400 ml-2" />
+  <input
+    className="flex-grow h-full outline-none text-sm"
+    onChange={handleSearch}
+    value={searchKeyword}
+    type="text"
+    placeholder="Search"
+  />
+</div>
+
             </div>
 
             {/* Table */}

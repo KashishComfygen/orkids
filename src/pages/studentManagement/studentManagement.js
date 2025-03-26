@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react';
-import { FaSearch } from "react-icons/fa";
+import { MdSearch } from 'react-icons/md';
 import { MdDeleteOutline } from "react-icons/md";
 import { RiEditLine } from "react-icons/ri";
 import ReactPaginate from 'react-paginate';
@@ -74,7 +74,7 @@ const StudentManagements = () => {
                     {/* Search Bar */}
                     <div className='flex flex-col items-start gap-4 text-[#7E84A3]'>
                         <div className='max-w-lg bg-white h-[40px] flex items-center border border-[#D9E1EC] rounded gap-2'>
-                            <FaSearch className='w-6 h-6 text-gray-400 ml-2' />
+                            <MdSearch className='w-6 h-6 text-gray-400 ml-2' />
                             <input
                                 className='flex-grow h-full outline-none text-sm'
                                 onChange={(e) => handleSearch(e)}

@@ -1,0 +1,25 @@
+{
+    "Heading": "Report Management",
+    "tableJSON": {
+      "tableName": "Question",
+      "tableHeading": {
+        "Student": "Student",
+        "DOB": "DOB",
+        "Mobile No": "Mobile No",
+        "E-Mail": "E-Mail",
+        "Grade": "Grade",
+         " ":" "
+      },
+      "tableRowData": [
+        {
+          "Student": "<div><input class='pr-2' type='checkbox'/> Amit Kumar </div>",
+          "DOB": "20,000",
+          "Mobile No": "9898989898",
+          "E-Mail": "Amit@abc.com",
+          "Grade": "05",
+          "Action": "<div class='flex justify-end h-full items-center gap-1 p-1'><img class='cursor-pointer' src='/icons/create.svg'/><img class='cursor-pointer' src='/icons/delete.svg'/></div>"
+        }
+        
+      ]
+    }
+  }

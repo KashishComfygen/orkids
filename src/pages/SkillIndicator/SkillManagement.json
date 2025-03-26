@@ -1,0 +1,25 @@
+{
+    "Heading": "Skill Indicator",
+    "tableJSON": {
+      "tableName": "TABLE HEADING",
+      "tableHeading": {
+        "Language": "Language",
+        "dummy1 ":" ",
+        "dummy2":" ",
+        "dummy3":" ",
+        "dummy4":" ",
+        "dummy5":" "
+     
+      },
+      "tableRowData": [
+        {
+          "Language": "<div><input class='pr-2' type='checkbox'/> Amit Kumar </div>",
+          "dummy1 ":" ",
+          "dummy2":" ",
+          "dummy3":" ",
+          "dummy4":" ",
+          "Action": "<div class='flex justify-end h-full items-center gap-1 p-1'><img class='cursor-pointer' src='/icons/create.svg'/><img class='cursor-pointer' src='/icons/delete.svg'/></div>"
+        }
+      ]
+    }
+  }
